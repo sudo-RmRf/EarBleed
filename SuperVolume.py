@@ -15,10 +15,13 @@ sink = z.read()
 def set_vol(val):
     #subprocess.call("pactl -- set-sink-volume "+sink+" "+value, shell=True)
     value = val+"%"
-    command = "pactl -- set-sink-volume "+sink+" "+value
-    subprocess.call(command)
-    subprocess.call("echo '" +val+ "' > /home/tyler/SuperVolume/SVlog.txt", shell=True)
-
+    #command = "pactl -- set-sink-volume "+sink+" "+value
+    #subprocess.call(command)
+    #subprocess.call("echo '" +val+ "' > /home/tyler/SuperVolume/SVlog.txt", shell=True)
+    command_args = ["pactl", "--", "set-sink-volume", sink, value]
+    subprocess.call(command_args)
+    echo val > "/home/tyler/SuperVolume/SVlog.txt"
+    
 w = Scale(master, length=175, from_=0, to=300, orient=HORIZONTAL, command=set_vol)
 w.pack()
 
