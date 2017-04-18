@@ -13,11 +13,10 @@ z=open("/home/tyler/SuperVolume/currentSink2.txt", "r")
 sink = z.read()
 
 def set_vol(val):
-    #subprocess.call("pactl -- set-sink-volume ",sink, val,"%", shell=True)
+    #subprocess.call("pactl -- set-sink-volume "+sink+" "+value, shell=True)
     value = val+"%"
-    com = sink+" "+value
-    command = "pactl -- set-sink-volume "+value+sink+""
-    print com
+    command = "pactl -- set-sink-volume "+sink+" "+value
+    subprocess.call(command)
     subprocess.call("echo '" +val+ "' > /home/tyler/SuperVolume/SVlog.txt", shell=True)
 
 w = Scale(master, length=175, from_=0, to=300, orient=HORIZONTAL, command=set_vol)
