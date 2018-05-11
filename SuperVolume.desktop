@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Terminal=false
+Name=Super Volume
+Icon=/usr/share/SuperVolume/icon.ico
+Exec=/usr/share/SuperVolume/SuperVolume.py
+StartupWMClass=supervolume
