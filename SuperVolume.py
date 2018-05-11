@@ -2,24 +2,26 @@
 from Tkinter import *
 import subprocess
 import os
+import sched, time
+
 
 master = Tk(className="supervolume")
 master.wm_title("Super Volume")
 master.geometry("200x75+100+50")
 
-subprocess.call('pacmd list-sinks | grep "index" > /home/tyler/SuperVolume/currentSink.txt', shell=True)
-subprocess.call("sed 's/[ * index: ]//g' /home/tyler/SuperVolume/currentSink.txt > /home/tyler/SuperVolume/currentSink2.txt", shell=True)
-z=open("/home/tyler/SuperVolume/currentSink2.txt", "r")
-sink = z.read()
-sink = sink.strip()
-
 def set_vol(val):
+    subprocess.call('pacmd list-sinks | grep "index" > /home/tyler/SuperVolume/currentSink.txt', shell=True)
+    subprocess.call("sed 's/[ * index: ]//g' /home/tyler/SuperVolume/currentSink.txt > /home/tyler/SuperVolume/currentSink2.txt", shell=True)
+    z=open("/home/tyler/SuperVolume/currentSink2.txt", "r")
+    sink = z.read()
+    sink = sink.strip()
+    print sink
     subprocess.call("pactl -- set-sink-volume "+sink+" "+val+"%", shell=True)
+    subprocess.call("echo '" +val+ "' > /home/tyler/SuperVolume/SVlog.txt", shell=True)
     #com = sink+" "+value
     #command = "pactl -- set-sink-volume "+value+sink+""
     #print com
-    subprocess.call("echo '" +val+ "' > /home/tyler/SuperVolume/SVlog.txt", shell=True)
-
+    
 w = Scale(master, length=175, from_=0, to=300, orient=HORIZONTAL, command=set_vol)
 w.pack()
 
