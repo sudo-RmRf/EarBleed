@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 from Tkinter import *
 import subprocess
 import os
@@ -15,7 +15,7 @@ def set_vol(val):
     z=open("/usr/share/SuperVolume/currentSink2.txt", "r")
     sink = z.read()
     sink = sink.strip()
-    print sink
+    print (sink)
     subprocess.call("pactl -- set-sink-volume "+sink+" "+val+"%", shell=True)
     subprocess.call("echo '" +val+ "' > /usr/share/SuperVolume/SVlog.txt", shell=True)
     #com = sink+" "+value
