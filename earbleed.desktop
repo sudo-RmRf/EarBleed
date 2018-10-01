@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Terminal=false
+Name=EarBleed
+Exec=/bin/earbleed
+StartupWMClass=supervolume
+
+Icon=/home/thollar/earbleed/icon.ico
+Name[en_US]=earbleed.desktop
