@@ -6,3 +6,4 @@ Exec=/bin/earbleed
 StartupWMClass=supervolume
 Name[en_US]=earbleed.desktop
 
+Icon=/home/thollar/EarBleed/icon.ico
