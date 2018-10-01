@@ -2,6 +2,6 @@
 Type=Application
 Terminal=false
 Name=Super Volume
-Icon=/home/thollar/SuperVolume/icon.ico
-Exec=/home/thollar/SuperVolume/SuperVolume.py
+Exec=/bin/supervolume
 StartupWMClass=supervolume
+
