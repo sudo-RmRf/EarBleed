@@ -6,8 +6,6 @@ import sched, time
 
 master = Tk(className="earbleed")
 master.wm_title("EarBleed")
-img = PhotoImage(file='./favicon.gif')
-master.tk.call('wm', 'iconphoto', master._w, img)
 master.geometry("200x75+100+50")
 
 def set_vol(val):
