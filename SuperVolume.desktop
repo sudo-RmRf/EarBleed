@@ -1,7 +1,0 @@
-[Desktop Entry]
-Type=Application
-Terminal=false
-Name=Super Volume
-Exec=/bin/supervolume
-StartupWMClass=supervolume
-
