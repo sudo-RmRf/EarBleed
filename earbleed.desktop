@@ -4,6 +4,5 @@ Terminal=false
 Name=EarBleed
 Exec=/bin/earbleed
 StartupWMClass=supervolume
-Name[en_US]=earbleed.desktop
+Name[en_US]=EarBleed
 
-Icon=/home/thollar/EarBleed/icon.ico
