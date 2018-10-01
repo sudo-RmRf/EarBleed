@@ -1,2 +1,2 @@
 #!/bin/bash
-python /home/thollar/SuperVolume/SuperVolume.py
+python /home/thollar/EarBleed/earbleed.py

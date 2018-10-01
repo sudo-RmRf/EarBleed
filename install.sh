@@ -14,6 +14,8 @@ then
   sudo chmod +x ./uninstall.sh 
   echo "Icon=""${PWD}""/icon.ico" >> ${PWD}/earbleed.desktop
   sudo chmod +x "${PWD}"/earbleed.py
+  echo "#!/bin/bash" > ${PWD}/ebstart.sh
+  echo "python ${PWD}/earbleed.py" >> ${PWD}/ebstart.sh
   sudo chmod +x "${PWD}"/ebstart.sh
   sudo ln -s "${PWD}"/ebstart.sh /bin/earbleed
   sudo cp "${PWD}"/earbleed.desktop /usr/share/applications/earbleed.desktop
