@@ -1,2 +1,2 @@
-#/bin/bash
-python /usr/share/SuperVolume/SuperVolume.py
+#!/bin/bash
+python /home/thollar/SuperVolume/SuperVolume.py

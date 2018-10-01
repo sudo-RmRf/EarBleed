@@ -1,8 +1,11 @@
-#!/bin/bash
-
+#!/bin/bash 
+sudo apt install python3 -y
 sudo apt install python3-tk -y
-mkdir /usr/share/SuperVolume
-cp ./* /usr/share/SuperVolume
-mv /usr/share/SuperVolume/SuperVolume.desktop /usr/share/applications
-chmod +x /usr/share/SuperVolume/uninstall.sh
-#rm -rf "${0%/*}"
+sudo mkdir /usr/share/SuperVolume
+sudo cp ./*.* /usr/share/SuperVolume/
+sudo mv /usr/share/SuperVolume/SuperVolume.desktop /usr/share/applications/SuperVolume.desktop
+sudo chmod +x /usr/share/SuperVolume/Supervolume.py
+sudo chmod +x /usr/share/svstart.sh
+sudo ln -s /usr/share/SuperVolume/svstart.sh /bin/supervolume
+
+
