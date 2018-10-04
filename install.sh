@@ -10,7 +10,7 @@ then
   sudo apt install python3-tk -y
   echo "sudo rm -f /bin/earbleed" > ${PWD}/uninstall.sh
   echo "sudo rm -f /usr/share/applications/earbleed.desktop" >> ${PWD}/uninstall.sh
-  echo "sudo rm -rf ${PWD}/EarBleed" >> ${PWD}/uninstall.sh
+  echo "sudo rm -rf ${PWD}" >> ${PWD}/uninstall.sh
   sudo chmod +x ./uninstall.sh 
   echo "Icon=""${PWD}""/icon.ico" >> ${PWD}/earbleed.desktop
   sudo chmod +x "${PWD}"/earbleed.py
