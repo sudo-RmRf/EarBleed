@@ -1,4 +1,4 @@
-# SuperVolume
+# Earbleed
 *********************************************************************************************************************************** 
 **EarBleed is a GUI front end for Pulse Audio Control which will allow you to increase the volume of your computer past 100%. I made this out of necessity for the ability to make my stock laptop speakers louder in a user friendly way. This software could cause damage to your speakers if used carelessly. Earbleed allows up to 300% volume, this limit was come to mostly because it sounded good and is in no way based on what is safe for your speakers. Again I take no responsibility for reckless use of this software.**
 ***********************************************************************************************************************************
