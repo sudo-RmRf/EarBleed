@@ -6,8 +6,8 @@ read -p "" -n 1 -r
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-  sudo apt install python3 -y
-  sudo apt install python3-tk -y
+  sudo apt install python -y
+  sudo apt install python-tk -y
   echo "sudo rm -f /bin/earbleed" > ${PWD}/uninstall.sh
   echo "sudo rm -f /usr/share/applications/earbleed.desktop" >> ${PWD}/uninstall.sh
   echo "sudo rm -rf ${PWD}/" >> ${PWD}/uninstall.sh
